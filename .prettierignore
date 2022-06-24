@@ -1,0 +1,9 @@
+**/node_modules/**
+.github/**
+.idea/**
+.circleci/**
+.cache/**
+.vscode/**
+dist*/**
+build/**
+coverage/**
