@@ -1,9 +1,18 @@
 {
   "singleQuote": true,
   "printWidth": 100,
-  "trailingComma": "all",
+  "trailingComma": "es5",
   "quoteProps": "preserve",
-  "bracketSpacing": false,
+  "semi": true,
+  "bracketSpacing": true,
   "arrowParens": "avoid",
-  "embeddedLanguageFormatting": "off"
+  "embeddedLanguageFormatting": "off",
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }
