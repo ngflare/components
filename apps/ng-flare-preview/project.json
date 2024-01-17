@@ -1,0 +1,85 @@
+{
+  "name": "ng-flare-preview",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "ng-flare",
+  "sourceRoot": "apps/ng-flare-preview/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ng-flare-preview",
+        "index": "apps/ng-flare-preview/src/index.html",
+        "browser": "apps/ng-flare-preview/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/ng-flare-preview/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/ng-flare-preview/src/favicon.ico",
+          "apps/ng-flare-preview/src/assets"
+        ],
+        "styles": ["apps/ng-flare-preview/src/styles.scss"],
+        "scripts": [],
+        "server": "apps/ng-flare-preview/src/main.server.ts",
+        "prerender": true,
+        "ssr": {
+          "entry": "apps/ng-flare-preview/server.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "ng-flare-preview:build:production"
+        },
+        "development": {
+          "buildTarget": "ng-flare-preview:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "ng-flare-preview:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/ng-flare-preview/jest.config.ts"
+      }
+    }
+  }
+}
