@@ -11,12 +11,7 @@
     },
     "lint": {
       "cache": true,
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json",
-        "{workspaceRoot}/.eslintignore",
-        "{workspaceRoot}/eslint.config.js"
-      ]
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json", "{workspaceRoot}/.eslintignore", "{workspaceRoot}/eslint.config.js"]
     },
     "@nx/jest:jest": {
       "cache": true,
@@ -34,6 +29,10 @@
     "e2e": {
       "cache": true,
       "inputs": ["default", "^production"]
+    },
+    "build-storybook": {
+      "cache": true,
+      "inputs": ["default", "^production", "{projectRoot}/.storybook/**/*", "{projectRoot}/tsconfig.storybook.json"]
     }
   },
   "namedInputs": {
@@ -46,7 +45,10 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js"
+      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/tsconfig.storybook.json"
     ],
     "sharedGlobals": []
   },
@@ -65,5 +67,12 @@
       "style": "scss"
     }
   },
-  "nxCloudAccessToken": "OWFiM2E1ZjAtMDk0Yy00OWNmLTgwNWEtY2NmYjFlNGZjNzIzfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "OWFiM2E1ZjAtMDk0Yy00OWNmLTgwNWEtY2NmYjFlNGZjNzIzfHJlYWQtd3JpdGU=",
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": ["build-storybook"]
+      }
+    }
+  }
 }
