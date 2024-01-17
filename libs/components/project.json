@@ -8,7 +8,7 @@
   "targets": {
     "build": {
       "executor": "@nx/angular:package",
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "outputs": ["{workspaceRoot}/dist"],
       "options": {
         "project": "libs/components/ng-package.json"
       },
@@ -39,7 +39,8 @@
         "port": 4400,
         "configDir": "libs/components/.storybook",
         "browserTarget": "components:build-storybook",
-        "compodoc": false
+        "compodoc": false,
+        "styles": ["libs/components/src/lib/components/button/button.css"]
       },
       "configurations": {
         "ci": {
@@ -66,6 +67,12 @@
       "executor": "nx:run-commands",
       "options": {
         "command": "test-storybook -c libs/components/.storybook --url=http://localhost:4400"
+      }
+    },
+    "build-assets": {
+      "executor": "nx:run-script",
+      "options": {
+        "script": "build-assets"
       }
     }
   }
