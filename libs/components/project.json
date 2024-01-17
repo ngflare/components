@@ -40,7 +40,11 @@
         "configDir": "libs/components/.storybook",
         "browserTarget": "components:build-storybook",
         "compodoc": false,
-        "styles": ["libs/components/src/lib/components/button/button.css"]
+        "styles": [
+          "libs/components/styles/common/common.css",
+          "libs/components/styles/themes/light-flare.css",
+          "libs/components/src/lib/components/button/button.css"
+        ]
       },
       "configurations": {
         "ci": {

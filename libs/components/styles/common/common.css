@@ -1,0 +1,12 @@
+:root {
+  --flare-font-weight-light: 300;
+  --flare-font-weight-regular: 400;
+  --flare-font-weight-medium: 500;
+  --flare-font-weight-semibold: 600;
+  --flare-font-weight-bold: 700;
+  --flare-primary-font-family: "Bai Jamjuree", sans-serif;
+}
+
+html {
+  font-family: var(--flare-primary-font-family);
+}

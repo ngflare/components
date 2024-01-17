@@ -1,3 +1,33 @@
 .f-button {
-  height: 30px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  font-family: inherit;
+  word-spacing: inherit;
+  letter-spacing: inherit;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: var(--flare-font-weight-semibold);
+  font-size: 1rem;
+  width: auto;
+  padding: 0.625rem 1rem;
+  vertical-align: middle;
+  background-color: var(--flare-button-background-color);
+  color: var(--flare-button-text-color);
+  border-radius: 3px;
+}
+
+.f-button-small {
+  font-size: 0.875rem;
+  padding: 0.5625rem 1rem;
+}
+
+.f-button-large {
+  font-size: 1.125rem;
+  padding: 0.78125rem 1.25rem;
 }

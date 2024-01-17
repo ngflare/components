@@ -1,0 +1,5 @@
+:root {
+  --flare-primary-color: #3867d6;
+  --flare-button-background-color: var(--flare-primary-color);
+  --flare-button-text-color: #ffffff;
+}

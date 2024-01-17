@@ -13,7 +13,7 @@ export class FlareButtonDirective extends FlareButtonBaseDirective {
   get classes(): string {
     let str: string = 'f-button';
     if (this.size) {
-      str += `f-button-${this.size}`;
+      str += ` f-button-${this.size}`;
     }
     return str;
   }

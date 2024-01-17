@@ -1,15 +1,34 @@
-import { Meta, StoryObj } from '@storybook/angular';
+import { argsToTemplate, Meta, StoryObj } from '@storybook/angular';
 import { FlareButtonDirective } from './button.directive';
 
 const meta: Meta<FlareButtonDirective> = {
   title: 'Button',
   component: FlareButtonDirective,
-  render: () => ({
-    template: `<button f-button type="button">Submit</button>`,
+  argTypes: {
+    size: {
+      name: 'Size',
+      control: {
+        type: 'select',
+        labels: {
+          small: 'small',
+          undefined: 'default',
+          large: 'large',
+        },
+      },
+      options: ['small', undefined, 'large'],
+    },
+  },
+  render: (args) => ({
+    props: args,
+    template: `<button f-button type="button" ${argsToTemplate(args)}>Submit</button>`,
   }),
 };
 
 export default meta;
 type Story = StoryObj<FlareButtonDirective>;
 
-export const Default: Story = {};
+export const Standard: Story = {
+  args: {
+    size: undefined,
+  },
+};
