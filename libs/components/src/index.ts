@@ -1,2 +1,2 @@
-export * from './lib/components/core';
 export * from './lib/components/button';
+export * from './lib/components/core';

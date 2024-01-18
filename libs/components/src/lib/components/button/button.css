@@ -31,3 +31,62 @@
   font-size: 1.125rem;
   padding: 0.78125rem 1.25rem;
 }
+
+.f-button:hover,
+.f-button:focus-visible {
+  background-color: var(--flare-button-background-hover-color);
+}
+
+.f-button:active {
+  background-color: var(--flare-button-background-active-color);
+}
+
+.f-stroked-button {
+  color: var(--flare-stroked-button-text-color);
+  background-color: var(--flare-stroked-button-background-color);
+  border: 1px solid var(--flare-stroked-button-border-color);
+}
+
+.f-stroked-button:hover,
+.f-stroked-button:focus-visible {
+  background-color: var(--flare-stroked-button-background-hover-color);
+}
+
+.f-stroked-button:active {
+  background-color: var(--flare-stroked-button-background-active-color);
+}
+
+.f-raised-button {
+  box-shadow: var(--flare-raised-button-box-shadow);
+}
+
+.f-text-button {
+  color: var(--flare-text-button-text-color);
+  background-color: var(--flare-text-button-background-color);
+}
+
+.f-text-button:hover,
+.f-text-button:focus-visible {
+  background-color: var(--flare-text-button-background-hover-color);
+}
+
+.f-text-button:active {
+  background-color: var(--flare-stroked-button-background-active-color);
+}
+
+.f-button-circular {
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0;
+}
+
+.f-button-circular.f-button-small {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.f-button-circular.f-button-large {
+  height: 3rem;
+  width: 3rem;
+}

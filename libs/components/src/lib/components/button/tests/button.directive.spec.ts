@@ -1,4 +1,4 @@
-import { FlareButtonDirective } from './button.directive';
+import { FlareButtonDirective } from '../button.directive';
 
 describe('ButtonDirective', () => {
   it('should create an instance', () => {
