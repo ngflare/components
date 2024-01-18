@@ -1,8 +1,8 @@
-import { StrokedButtonDirective } from '../stroked-button.directive';
+import { FlareStrokedButtonDirective } from '@ng-flare/components';
 
-describe('StrokedButtonDirective', () => {
+describe('FlareStrokedButtonDirective', () => {
   it('should create an instance', () => {
-    const directive = new StrokedButtonDirective();
+    const directive = new FlareStrokedButtonDirective();
     expect(directive).toBeTruthy();
   });
 });

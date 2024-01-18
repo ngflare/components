@@ -1,8 +1,8 @@
-import { TextButtonDirective } from '../text-button.directive';
+import { FlareTextButtonDirective } from '@ng-flare/components';
 
-describe('TextButtonDirective', () => {
+describe('FlareTextButtonDirective', () => {
   it('should create an instance', () => {
-    const directive = new TextButtonDirective();
+    const directive = new FlareTextButtonDirective();
     expect(directive).toBeTruthy();
   });
 });

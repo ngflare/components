@@ -1,8 +1,8 @@
-import { RaisedButtonDirective } from '../raised-button.directive';
+import { FlareRaisedButtonDirective } from '@ng-flare/components';
 
-describe('RaisedButtonDirective', () => {
+describe('FlareRaisedButtonDirective', () => {
   it('should create an instance', () => {
-    const directive = new RaisedButtonDirective();
+    const directive = new FlareRaisedButtonDirective();
     expect(directive).toBeTruthy();
   });
 });
